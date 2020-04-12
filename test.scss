@@ -1,0 +1,19 @@
+@mixin flexContainer {
+    display: flex;
+}
+
+.nav_links, .main, .section_images, .aside, .footer_links {
+    @include flexContainer();
+}
+
+@mixin flexFlow ($flow) {
+    flex-flow: $flow;
+}
+
+.aside , .section_images, .main {
+    @include flexFlow(column nowrap);
+}
+
+.aside {
+    @include flexFlow(row wrap)
+}
